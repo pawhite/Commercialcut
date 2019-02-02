@@ -1,8 +1,6 @@
 #!/bin/csh
 
 cd /
-pkg update -y
-pkg upgrade -y
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
@@ -11,7 +9,6 @@ pkg install -y nano
 pkg install -y ffmpeg
 pkg install -y bash
 pkg install -y gcc7
-pkg install -y git
 pkg install -y handbrake
 
 pkg set -o devel/pkg-config:devel/pkgconf
