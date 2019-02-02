@@ -8,6 +8,7 @@ pkg install -y argtable
 pkg install -y nano
 pkg install -y ffmpeg
 pkg install -y bash
+pkg install -y git
 pkg install -y gcc7
 pkg install -y handbrake
 
@@ -15,7 +16,7 @@ pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf 
 
 cd /usr/local/libdata/pkgconfig/
-git clone https://raw.githubusercontent.com/pawhite/Commercialcut/master/argtable2.pc
+wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/argtable2.pc
 
 cd /
 setenv CC gcc7
@@ -30,7 +31,7 @@ cd /usr/local/Comskip
 ./autogen.sh
 ./configure
 make
-git clone https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
+wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /usr/local 
 git clone --depth 1 https://github.com/BrettSheleski/comchap
@@ -42,9 +43,9 @@ ln -s /usr/local/comchap/comcut /usr/bin/comcut
 ln -s /usr/local/comchap/comchap /usr/bin/comchap
 
 cd /
-git clone https://raw.githubusercontent.com/pawhite/Commercialcut/master/postcc.sh
+wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/postcc.sh
 chmod +x /postcc.sh
 
 cd media/comchap
-git clone https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
+wget https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
 cd /
