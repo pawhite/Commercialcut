@@ -12,7 +12,7 @@ sleep 10
 while (1)
 if ( ! -e "$b" ) then 
 echo "Running Comcut"
-/comchap/comcut --ffmpeg=/usr/local/bin/ffmpeg --comskip=/Comskip-master/comskip --lockfile=/tmp/comchap.lock --comskip-ini=/Comskip-master/comskip.ini "$1" "$b"
+comcut --ffmpeg=/usr/bin/ffmpeg --comskip=/usr/bin/comskip --lockfile=/tmp/comchap.lock --comskip-ini=/usr/local/Comskip/comskip.ini "$1" "$b"
 echo "Comcut complete" 
 else
 echo "Comcut already done" 
