@@ -45,11 +45,9 @@ ln -s /usr/local/comchap/comcut /usr/bin/comcut
 ln -s /usr/local/comchap/comchap /usr/bin/comchap
 
 cd /
-git https://github.com/pawhite/Commercialcut/post.sh
-chmod +x /post.sh
+git https://github.com/pawhite/Commercialcut/postj.sh
+chmod +x /postj.sh
 
 cd media/comchap
 git https://github.com/warrentc3/postprocessing/hb-dvr.json
 cd /
-
-
