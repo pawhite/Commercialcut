@@ -15,7 +15,7 @@ pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf 
 
 cd /usr/local/libdata/pkgconfig/
-git https://github.com/pawhite/Commercialcut/argtable2.pc
+git clone https://github.com/pawhite/Commercialcut/argtable2.pc
 
 cd /
 setenv CC gcc7
@@ -25,12 +25,12 @@ mkdir /usr/local/Comskip
 mkdir /media/comchap
 mkdir /media/TSFiles
 cd /usr/local 
-git clone --depth 1 git://github.com/erikkaashoek/Comskip
+git clone --depth 1 https://github.com/erikkaashoek/Comskip
 cd /usr/local/Comskip
 ./autogen.sh
 ./configure
 make
-git https://github.com/pawhite/Commercialcut/comskip.ini
+git clone https://github.com/pawhite/Commercialcut/comskip.ini
 
 cd /usr/local 
 git clone --depth 1 https://github.com/BrettSheleski/comchap
@@ -42,11 +42,11 @@ ln -s /usr/local/comchap/comcut /usr/bin/comcut
 ln -s /usr/local/comchap/comchap /usr/bin/comchap
 
 cd /
-git https://github.com/pawhite/Commercialcut/post.sh
+git clone https://github.com/pawhite/Commercialcut/post.sh
 chmod +x /post.sh
 
 cd media/comchap
-git https://github.com/warrentc3/postprocessing/hb-dvr.json
+git clone https://github.com/warrentc3/postprocessing/hb-dvr.json
 cd /
 
 
