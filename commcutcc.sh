@@ -1,6 +1,6 @@
 #!/bin/csh
 
-path = ($path /usr/local/bin)
+set path = ($path /usr/local/bin)
 
 cd /
 pkg install -y autoconf
