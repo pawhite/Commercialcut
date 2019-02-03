@@ -24,8 +24,9 @@ pkg install -y handbrake
 sleep180
 
 pkg set -o devel/pkg-config:devel/pkgconf
+sleep 10
 pkg install -f devel/pkgconf
-
+sleep 10
 
 setenv CC gcc7
 
