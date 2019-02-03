@@ -18,7 +18,7 @@ pkg install -y gcc7
 pkg install -y handbrake
 setenv CC gcc7
 
-pkg set -o -y devel/pkg-config:devel/pkgconf
+pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f -y devel/pkgconf 
 
 cd /usr/local 
