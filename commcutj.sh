@@ -16,6 +16,7 @@ pkg install -y ffmpeg
 pkg install -y git
 pkg install -y gcc7
 pkg install -y handbrake
+
 setenv CC gcc7
 
 pkg set -o devel/pkg-config:devel/pkgconf
