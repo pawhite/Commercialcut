@@ -6,24 +6,17 @@ cd /
 mkdir /media/comchap
 mkdir /media/TSFiles
 pkg install -y autoconf
-sleep 20
 pkg install -y automake
-slrrp 20
 pkg install -y libtool
-sleep 20
 pkg install -y argtable
 pkg install -y nano
-s;eep 20
 pkg install -y ffmpeg
-sleep 60
 pkg install -y git
-sleep 20
 pkg install -y gcc7
-sleep 30
 setenv CC gcc7
 
-pkg set -y -o devel/pkg-config:devel/pkgconf
-pkg install -y -f devel/pkgconf 
+pkg set -o devel/pkg-config:devel/pkgconf
+pkg install -f devel/pkgconf 
 
 cd /usr/local 
 git clone --depth 1 https://github.com/erikkaashoek/Comskip
