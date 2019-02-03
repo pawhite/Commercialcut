@@ -3,16 +3,22 @@
 set path = ($path /usr/local/bin)
 
 cd /
+
+yes | pkg set
+yes | pkg install
+
 mkdir /media/comchap
 mkdir /media/TSFiles
-pkg install -y autoconf
-pkg install -y automake
-pkg install -y libtool
-pkg install -y argtable
-pkg install -y nano
-pkg install -y ffmpeg
-pkg install -y git
-pkg install -y gcc7
+
+pkg install autoconf
+pkg install automake
+pkg install libtool
+pkg install argtable
+pkg install nano
+pkg install ffmpeg
+pkg install git
+pkg install gcc7
+pkg install handbrake
 setenv CC gcc7
 
 pkg set -o devel/pkg-config:devel/pkgconf
@@ -29,12 +35,6 @@ wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 cd /usr/local 
 git clone --depth 1 https://github.com/BrettSheleski/comchap
 
-ln -s /usr/local/bin/nano /usr/bin/nano
-ln -s /usr/local/bin/ffmpeg /usr/bin/ffmpeg
-ln -s /usr/local/Comskip/comskip /usr/bin/comskip
-ln -s /usr/local/comchap/comcut /usr/bin/comcut
-ln -s /usr/local/comchap/comchap /usr/bin/comchap
-
 cd /
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/postj.sh
 chmod +x /postj.sh
@@ -42,5 +42,3 @@ chmod +x /postj.sh
 cd media/comchap
 wget https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
 cd /
-pkg install -y handbrake
-
