@@ -19,7 +19,7 @@ pkg install -y handbrake
 setenv CC gcc7
 
 pkg set -o devel/pkg-config:devel/pkgconf
-pkg install -f -y devel/pkgconf 
+pkg install -f devel/pkgconf 
 
 cd /usr/local 
 git clone --depth 1 https://github.com/erikkaashoek/Comskip
