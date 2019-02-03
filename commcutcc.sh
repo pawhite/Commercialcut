@@ -4,25 +4,22 @@ set path = ($path /usr/local/bin)
 
 cd /
 
--y | set
--y | install
-
 mkdir /media/comchap
 mkdir /media/TSFiles
 
-pkg install autoconf
-pkg install automake
-pkg install libtool
-pkg install argtable
-pkg install nano
-pkg install ffmpeg
-pkg install git
-pkg install gcc7
-pkg install handbrake
+pkg install -y autoconf
+pkg install -y automake
+pkg install -y libtool
+pkg install -y argtable
+pkg install -y nano
+pkg install -y ffmpeg
+pkg install -y git
+pkg install -y gcc7
+pkg install -y handbrake
 setenv CC gcc7
 
-pkg set -o devel/pkg-config:devel/pkgconf
-pkg install -f devel/pkgconf 
+pkg set -o -y devel/pkg-config:devel/pkgconf
+pkg install -f -y devel/pkgconf 
 
 cd /usr/local 
 git clone --depth 1 https://github.com/erikkaashoek/Comskip
