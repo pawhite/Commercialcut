@@ -4,6 +4,29 @@ set path = ($path /usr/local/bin)
  
 cd /
 
+pkg install -y git
+sleep 180
+pkg install -y autoconf
+sleep 10
+pkg install -y automake
+sleep 12
+pkg install -y libtool
+sleep 3
+pkg install -y argtable
+sleep 5
+pkg install -y nano
+sleep 3
+pkg install -y ffmpeg
+sleep 180
+pkg install -y gcc7
+sleep 180
+pkg install -y handbrake
+sleep180
+
+pkg set -o devel/pkg-config:devel/pkgconf
+pkg install -f devel/pkgconf
+
+
 setenv CC gcc7
 
 mkdir /media/comchap
