@@ -4,8 +4,8 @@ set path = ($path /usr/local/bin)
 
 cd /
 
-yes | pkg set
-yes | pkg install
+yes | set
+yes | install
 
 mkdir /media/comchap
 mkdir /media/TSFiles

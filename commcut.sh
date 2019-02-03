@@ -6,8 +6,8 @@ cd /
 mkdir /media/comchap
 mkdir /media/TSFiles
 
-yes | pkg set
-yes | pkg install
+yes | set
+yes | install
 
 pkg install autoconf
 pkg install automake
