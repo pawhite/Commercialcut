@@ -2,7 +2,7 @@
 
 set path = ($path /usr/local/bin)
 
-cd /
+sleep 5
 
 mkdir /media/comchap
 mkdir /media/TSFiles
