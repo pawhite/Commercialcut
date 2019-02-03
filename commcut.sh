@@ -22,8 +22,10 @@ setenv CC gcc7
 pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf 
 
+sleep 15
+
 cd /usr/local 
-wget https://github.com/erikkaashoek/Comskip
+git clone --depth 1 https://github.com/erikkaashoek/Comskip
 cd /usr/local/Comskip
 ./autogen.sh
 ./configure
@@ -31,7 +33,7 @@ make
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /usr/local 
-wget https://github.com/BrettSheleski/comchap
+get clone --depth 1 https://github.com/BrettSheleski/comchap
 
 cd /
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
