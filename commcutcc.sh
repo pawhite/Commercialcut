@@ -1,28 +1,13 @@
 #!/bin/csh
 
 set path = ($path /usr/local/bin)
-
+ 
 cd /
-
-mkdir /media/comchap
-mkdir /media/TSFiles
-
-pkg install -y autoconf
-pkg install -y automake
-pkg install -y libtool
-pkg install -y argtable
-pkg install -y nano
-pkg install -y ffmpeg
-pkg install -y git
-pkg install -y gcc7
-pkg install -y handbrake
 
 setenv CC gcc7
 
-pkg set -o devel/pkg-config:devel/pkgconf
-pkg install -f devel/pkgconf 
-
-sleep 15
+mkdir /media/comchap
+mkdir /media/TSFiles
 
 cd /usr/local 
 git clone --depth 1 https://github.com/erikkaashoek/Comskip
