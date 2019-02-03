@@ -3,6 +3,7 @@
 set path = ($path /usr/local/bin)
 
 cd /
+
 mkdir /media/comchap
 mkdir /media/TSFiles
 
@@ -15,13 +16,14 @@ pkg install -y ffmpeg
 pkg install -y git
 pkg install -y gcc7
 pkg install -y handbrake
+
 setenv CC gcc7
 
 pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf 
 
 cd /usr/local 
-git clone --depth 1 https://github.com/erikkaashoek/Comskip
+wget https://github.com/erikkaashoek/Comskip
 cd /usr/local/Comskip
 ./autogen.sh
 ./configure
@@ -29,7 +31,7 @@ make
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /usr/local 
-git clone --depth 1 https://github.com/BrettSheleski/comchap
+wget https://github.com/BrettSheleski/comchap
 
 cd /
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
