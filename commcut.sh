@@ -3,29 +3,28 @@
 set path = ($path /usr/local/bin)
 
 cd /
-pkg install -y autoconf
-pkg install -y automake
-pkg install -y libtool
-pkg install -y argtable
-pkg install -y nano
-pkg install -y ffmpeg
-pkg install -y git
-pkg install -y gcc7
-pkg install -y handbrake
-
-pkg set -o devel/pkg-config:devel/pkgconf
-pkg install -f -y devel/pkgconf 
-
-cd /usr/local/libdata/pkgconfig/
-wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/argtable2.pc
-
-cd /
-setenv CC gcc7
-
-mkdir /usr/local/comchap
-mkdir /usr/local/Comskip
 mkdir /media/comchap
 mkdir /media/TSFiles
+pkg install -y autoconf
+sleep 20
+pkg install -y automake
+slrrp 20
+pkg install -y libtool
+sleep 20
+pkg install -y argtable
+pkg install -y nano
+s;eep 20
+pkg install -y ffmpeg
+sleep 60
+pkg install -y git
+sleep 20
+pkg install -y gcc7
+sleep 30
+setenv CC gcc7
+
+pkg set -y -o devel/pkg-config:devel/pkgconf
+pkg install -y -f devel/pkgconf 
+
 cd /usr/local 
 git clone --depth 1 https://github.com/erikkaashoek/Comskip
 cd /usr/local/Comskip
@@ -50,5 +49,5 @@ chmod +x /post.sh
 cd media/comchap
 wget https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
 cd /
-
+pkg install -y handbrake
 
