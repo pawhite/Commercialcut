@@ -3,6 +3,9 @@
 cd /
 set path = ($path /usr/local/bin)
 
+git clone https://github.com/erikkaashoek/Comskip
+git clone https://github.com/BrettSheleski/comchap
+
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
@@ -18,18 +21,23 @@ pkg install -f devel/pkgconf
 mkdir /media/comchap
 mkdir /media/TSFiles
 
-wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
 chmod +x /post.sh
 
 setenv CC gcc7
 
-cd /usr/local/Comskip
+cd /Comskip
 ./autogen.sh
 ./configure
 make
-wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /media/comchap
-wget https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
+fetch https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
+
+cd /
+portsnap fetch extract
+cd /usr/ports/audio/lame
+make install/clean
 
 cd /
