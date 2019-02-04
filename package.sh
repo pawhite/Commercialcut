@@ -13,7 +13,7 @@ mkdir /media/TSFiles
 wget https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
 chmod +x /post.sh
 
-cd media/comchap
+cd /media/comchap
 wget https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
 
 cd /
