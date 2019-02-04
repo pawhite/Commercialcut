@@ -38,6 +38,6 @@ fetch https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.j
 cd /
 portsnap fetch extract
 cd /usr/ports/audio/lame
-make install/clean
+make install clean
 
 cd /
