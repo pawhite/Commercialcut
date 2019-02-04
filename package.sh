@@ -3,8 +3,8 @@
 set path = ($path /usr/local/bin)
 
 cd /usr/local
-git clone --depth 1 https://erikkaashoek/Comskip
-git clone --depth 1 https://BrettSheleski/comchap
+git clone https://erikkaashoek/Comskip
+git clone 1 https://BrettSheleski/comchap
 
 cd /
 mkdir /media/comchap
