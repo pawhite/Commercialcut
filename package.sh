@@ -4,9 +4,14 @@ set path = ($path /usr/local/bin)
 
 cd /
 
-git clone https://github.com/erikkaashoek/Comskip
-git clone https://github.com/BrettSheleski/comchap
+portsnap fetch extract
+cd /usr/ports/audio/lame
+make install clean
 
+cd /
+
+pkg install -y git
+pkg install -y bash
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
@@ -19,11 +24,10 @@ pkg install -y handbrake
 pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf
 
-mkdir /media/comchap
 mkdir /media/TSFiles
 
-fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
-chmod +x /post.sh
+git clone https://github.com/erikkaashoek/Comskip
+git clone https://github.com/BrettSheleski/comchap
 
 setenv CC gcc7
 
@@ -33,12 +37,8 @@ cd /Comskip
 make
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
-cd /media/comchap
-fetch https://raw.githubusercontent.com/warrentc3/postprocessing/master/hb-dvr.json
-
 cd /
-portsnap fetch extract
-cd /usr/ports/audio/lame
-make install clean
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
+chmod +x /post.sh
 
-cd /
+
