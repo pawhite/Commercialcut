@@ -10,6 +10,7 @@ make install clean
 
 cd /
 
+pkg install -y bash
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
