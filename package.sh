@@ -10,8 +10,6 @@ make install clean
 
 cd /
 
-pkg install -y git
-pkg install -y bash
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
@@ -23,8 +21,6 @@ pkg install -y handbrake
 
 pkg set -o devel/pkg-config:devel/pkgconf
 pkg install -f devel/pkgconf
-
-mkdir /media/TSFiles
 
 git clone https://github.com/erikkaashoek/Comskip
 git clone https://github.com/BrettSheleski/comchap
@@ -38,6 +34,7 @@ make
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /
+mkdir /media/ts_archive
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
 chmod +x /post.sh
 

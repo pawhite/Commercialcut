@@ -31,7 +31,7 @@ end
 HandBrakeCLI --input "$b" --output "$c" --format mkv --encoder x264 --quality 18 --loose-anamorphic --decomb fast --x264-preset medium --h264-profile high --h264-level 4.1 --aencoder ac3 --mixdown 5point1
 
 rm "$b"
-mv "$1" "/media/TSFiles/$a"
+mv "$1" "/media/ts_archive/$a"
 
 
 
