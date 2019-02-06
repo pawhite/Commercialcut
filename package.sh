@@ -4,12 +4,6 @@ set path = ($path /usr/local/bin)
 
 cd /
 
-portsnap fetch extract
-cd /usr/ports/audio/lame
-echo -ne '\n' | make install clean
-
-cd /
-
 echo y | pkg install bash
 echo y | pkg install autoconf
 echo y | pkg install automake
