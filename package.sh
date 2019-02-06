@@ -6,22 +6,22 @@ cd /
 
 portsnap fetch extract
 cd /usr/ports/audio/lame
-make install clean
+echo -ne '\n' | make install clean
 
 cd /
 
-pkg install -y bash
-pkg install -y autoconf
-pkg install -y automake
-pkg install -y libtool
-pkg install -y argtable
-pkg install -y nano
-pkg install -y ffmpeg
-pkg install -y gcc7
-pkg install -y handbrake
+echo y | pkg install bash
+echo y | pkg install autoconf
+echo y | pkg install automake
+echo y | pkg install libtool
+echo y | pkg install argtable
+echo y | pkg install nano
+echo y | pkg install ffmpeg
+echo y | pkg install gcc7
+echo y | pkg install handbrake
 
-pkg set -o devel/pkg-config:devel/pkgconf
-pkg install -f devel/pkgconf
+echo y | pkg set -o devel/pkg-config:devel/pkgconf
+echo y | pkg install -f devel/pkgconf
 
 git clone https://github.com/erikkaashoek/Comskip
 git clone https://github.com/BrettSheleski/comchap
