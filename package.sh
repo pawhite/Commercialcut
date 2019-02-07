@@ -1,4 +1,4 @@
-#!/bin/csh
+com#!/bin/csh
 
 set path = ($path /usr/local/bin)
 
@@ -18,9 +18,11 @@ pkg install -y handbrake
 echo y | pkg set -o devel/pkg-config:devel/pkgconf
 echo y | pkg install -f devel/pkgconf
 
+setenv CC gcc7
+
 fetch https://githubusercontent.com/pawhite/Commercialcut/master/comcompile.sh
 chmod +x /comcompile.sh
-./compile.sh
+./comcompile.sh
 
 cd /
 mkdir /media/ts_archive
