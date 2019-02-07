@@ -12,17 +12,22 @@ pkg install -y libtool
 pkg install -y argtable
 pkg install -y nano
 pkg install -y ffmpeg
-pkg install -y gcc7
 pkg install -y handbrake
 
 echo y | pkg set -o devel/pkg-config:devel/pkgconf
 echo y | pkg install -f devel/pkgconf
 
-setenv CC gcc7
+setenv CC clang
+hash git
 
-fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comcompile.sh
-chmod +x /comcompile.sh
-./comcompile.sh
+git clone https://github.com/erikkaashoek/Comskip
+git clone https://github.com/BrettSheleski/comchap
+
+cd /Comskip
+./autogen.sh
+./configure
+make
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /
 mkdir /media/ts_archive
