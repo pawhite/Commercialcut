@@ -1,4 +1,4 @@
-#!/bin/csh
+#!/bin/sh
 
 set path = ($path /usr/local/bin)
 
@@ -18,10 +18,9 @@ echo y | pkg set -o devel/pkg-config:devel/pkgconf
 echo y | pkg install -f devel/pkgconf
 
 setenv CC clang
-hash git
 
-git clone https://github.com/erikkaashoek/Comskip
-git clone https://github.com/BrettSheleski/comchap
+/usr/local/bin/git clone https://github.com/erikkaashoek/Comskip
+/usr/local/bin/git clone https://github.com/BrettSheleski/comchap
 
 cd /Comskip
 ./autogen.sh
