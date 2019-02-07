@@ -20,7 +20,7 @@ echo y | pkg install -f devel/pkgconf
 
 setenv CC gcc7
 
-fetch https://githubusercontent.com/pawhite/Commercialcut/master/comcompile.sh
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comcompile.sh
 chmod +x /comcompile.sh
 ./comcompile.sh
 
