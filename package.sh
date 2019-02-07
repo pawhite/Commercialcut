@@ -1,4 +1,4 @@
-com#!/bin/csh
+#!/bin/csh
 
 set path = ($path /usr/local/bin)
 
