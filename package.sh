@@ -10,10 +10,7 @@ pkg install -y bash
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
-pkg install -y argtable
-pkg install -y nano
 pkg install -y ffmpeg
-pkg install -y handbrake
 
 #Set up pkgconf and install
 echo y | pkg set -o devel/pkg-config:devel/pkgconf
