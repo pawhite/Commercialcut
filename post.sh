@@ -11,8 +11,7 @@ set b = `echo "$grab/$show".mkv`
 
 /usr/local/bin/ffmpeg -i "$a" -vf yadif -c:v libx264 -preset slow -crf 18 -c:a aac -b:a 192k "$b"
 
-rm "$a"
-mv "$1" "/media/ts-archive/$show.ts"
+mv "$1" "/media/ts_archive/$show.ts"
 
 
 
