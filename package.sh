@@ -7,6 +7,7 @@ cd /
 #Install packages
 pkg install -y git
 pkg install -y bash
+pkg install -y argtable
 pkg install -y autoconf
 pkg install -y automake
 pkg install -y libtool
