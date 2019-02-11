@@ -11,7 +11,7 @@ sleep `echo $$%10 | bc`
 
 /usr/local/bin/ffmpeg -i "$1" -vf yadif -c:v libx264 -preset slow -crf 18 -c:a aac -b:a 192k "$a"
 
-mv "$1" "/media/ts_archive/$show.ts"
+
 
 
 
