@@ -7,11 +7,11 @@ set grab = `printf "%s " $1:h`
 set a = `echo "$grab/$show".mkv`
 sleep `echo $$%10 | bc`
 
-/comchap/comcut --ffmpeg=/usr/local/bin/ffmpeg --comskip=/Comskip-master/comskip --lockfile=/tmp/comchap.lock --comskip-ini=/Comskip-master/comskip.ini "$1"
+/comchap/comcut --ffmpeg=/usr/local/bin/ffmpeg --comskip=/Comskip/comskip --lockfile=/tmp/comchap.lock --comskip-ini=/Comskip/comskip.ini "$1" 
 
 /usr/local/bin/ffmpeg -i "$1" -vf yadif -c:v libx264 -preset slow -crf 18 -c:a aac -b:a 192k "$a"
 
-mv "$1" "/media/ts_archive/$show.ts"
+mv "$1" "/media/ts_archive/$show.mkv"
 
 
 
