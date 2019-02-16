@@ -29,5 +29,6 @@ cd /
 mkdir /media/ts_archive
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
 chmod +x /post.sh
+chmod +x /comcut
 
 
