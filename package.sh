@@ -26,7 +26,6 @@ make install
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /comchap
-make
 make install
 
 cd /
