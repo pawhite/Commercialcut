@@ -16,13 +16,13 @@ echo y | pkg install -f devel/pkgconf
 
 setenv CC clang
 
-/usr/local/bin/git clone https://github.com/erikkaashoek/Comskip
-/usr/local/bin/git clone https://github.com/BrettSheleski/comchap
+/usr/local/bin/git clone https://raw.github.com/erikkaashoek/Comskip
+fetch https://raw.githubusercontent.com/BrettSheleski/comchap/master/comcut
 
 cd /Comskip
 ./autogen.sh
 ./configure
-make
+make install
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
 cd /

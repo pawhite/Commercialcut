@@ -5,7 +5,6 @@ set path = ($path /usr/local/bin)
 set show = `basename "$1" .ts` 
 set grab = `printf "%s " $1:h`
 set a = `echo "$grab/$show".mkv`
-sleep `echo $$%10 | bc`
 
 /comchap/comcut --ffmpeg=/usr/local/bin/ffmpeg --comskip=/Comskip/comskip --lockfile=/tmp/comchap.lock --comskip-ini=/Comskip/comskip.ini "$1"
 
