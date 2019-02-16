@@ -17,7 +17,7 @@ echo y | pkg install -f devel/pkgconf
 setenv CC clang
 
 /usr/local/bin/git clone https://github.com/erikkaashoek/Comskip
-fetch https://raw.githubusercontent.com/BrettSheleski/comchap/master/comcut
+/usr/local/bin/git clone https://github.com/BrettSheleski/comchap
 
 cd /Comskip
 ./autogen.sh
@@ -25,11 +25,15 @@ cd /Comskip
 make install
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
+cd /comchap
+make
+make install clean
+
 cd /
 mkdir /media/ts_archive
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post.sh
 chmod +x /post.sh
-chmod +x /comcut
+
 
 
 
