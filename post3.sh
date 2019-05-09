@@ -85,4 +85,5 @@ rm "$logofile"
 rm "$txtfile"
 rm /tmp/part-*.ts
 rm "$showfile"
+rm "$1"
 rm "$lockfile"
