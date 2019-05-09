@@ -16,6 +16,8 @@ echo y | pkg install -f devel/pkgconf
 setenv CC clang
 
 /usr/local/bin/git clone https://github.com/erikkaashoek/Comskip
+fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post3.sh
+chmod +x /post3.sh
 
 cd /Comskip
 ./autogen.sh
@@ -24,9 +26,6 @@ make install
 
 fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/comskip.ini
 
-cd /
-fetch https://raw.githubusercontent.com/pawhite/Commercialcut/master/post3.sh
-chmod +x /post3.sh
 
 
 
