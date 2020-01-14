@@ -64,14 +64,21 @@ fi
     
 /usr/local/bin/ffmpeg -hide_banner -loglevel error -nostdin -f concat -safe 0 -i "$showfile" -c copy -y "$outfile"
 
+#ffmpeg conversion to mkv
 /usr/local/bin/ffmpeg -i "$outfile" -vf yadif -c:v libx264 -preset slow -crf 18 -max_muxing_queue_size 1024 -c:a copy "$final"
+
+
 
 export LD_LIBRARY_PATH="$ldPath"
 rm "$edlfile"
 rm "$logfile"
 rm "$logofile"
 rm "$txtfile"
-rm /tmp/part-*.ts
+while [ $i != 0 ]
+  do
+  rm "/tmp/part-$i.ts"
+  i=$((i - 1))
+done
 rm "$showfile"
 rm "$1"
 rm "$lockfile"
